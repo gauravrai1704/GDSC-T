@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>GDSC Dev Team Recruitments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .topnav {
+            overflow: hidden;
+            background-color: #f8f9fa;
+        }
+        .topnav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+        .topnav ul li {
+            display: inline;
+        }
+        .topnav ul li a {
+            display: inline-block;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: #333;
+        }
+        .topnav .icon {
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            .topnav ul {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+            }
+            .topnav.responsive ul {
+                display: flex;
+            }
+            .topnav .icon {
+                display: block;
+                float: right;
+                font-size: 24px;
+                padding: 14px 16px;
+                color: #333;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <header class="topnav bg-white shadow-md">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <img src="logo.png" width="200" height="90" alt="Logo">
+            <ul class="flex space-x-5">
+                <li><a href="gdsctask.html" class="font-semibold text-blue-600 hover:text-blue-800">Instructions</a></li>
+                <li><a href="submissions.html" class="font-semibold text-blue-600 hover:text-blue-800">Submissions</a></li>
+                <li><a href="documentation.html" class="font-semibold text-blue-600 hover:text-blue-800">Documentation</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6 text-center">Submissions</h1>
+
+        <section class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Submit Your Project</h2>
+            <form id="submission-form" class="space-y-4">
+                <input id="user-input" type="text" placeholder="Enter your text here..." class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition">Submit</button>
+            </form>
+        </section>
+
+        <section class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Submitted Texts</h2>
+            <div id="submissions-list">
+                <!-- Submissions will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+    <script>
+        document.getElementById('submission-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const submissionInput = document.getElementById('user-input');
+            const submission = submissionInput.value;
+
+            if (submission.trim() === '') {
+                alert('Please enter some text before submitting.');
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:3000/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ submission })
+                });
+
+                if (response.ok) {
+                    alert('Submission successful!');
+                    submissionInput.value = '';
+                    loadSubmissions();
+                } else {
+                    alert('Submission failed. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while submitting your text.');
+            }
+        });
+
+        async function loadSubmissions() {
+            try {
+                const response = await fetch('http://localhost:3000/submissions');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const submissions = await response.json();
+                const submissionList = document.getElementById('submissions-list');
+                submissionList.innerHTML = '';
+
+                submissions.forEach(sub => {
+                    const div = document.createElement('div');
+                    div.textContent = sub;
+                    submissionList.appendChild(div);
+                });
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('submissions-list').innerHTML = 'Failed to load submissions.';
+            }
+        }
+
+        loadSubmissions();
+    </script>
+</body>
+</html>
