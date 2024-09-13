@@ -69,35 +69,41 @@
                             <ul class="list-disc pl-5 mt-2 space-y-2"></ul>
 
 
-Project Title<br><br>
 
-Overview:<br><br>
-This project is a [brief description of what the project does]. It was developed to [explain the purpose or goal of the project].<br>
+<br>Project Title : GDSC Dev Team Recruitments Web Project<br>
 
-Tools Used:<br>
+<br>Overview: <br>
 
-Programming Languages: [e.g., JavaScript, Python, HTML, CSS]<br>
-Frameworks/Libraries: [e.g., React, Flask, Bootstrap]<br>
-Database: [e.g., PostgreSQL, MongoDB]<br>
-Development Tools: [e.g., Visual Studio Code, Git]<br>
-Deployment: [e.g., Netlify, Heroku, AWS]<br>
-<br>Approach<br><br>
-
-Initial Setup:<br>
-Set up the development environment with [list any initial steps, such as installing dependencies].<br>
-Created the basic project structure and defined key files.<br><br>
-Development:<br>
-Implemented the core features using [tools/frameworks].<br>
-Addressed functionality such as [describe major features or components].<br><br>
-Testing:<br><br>
-Performed unit and integration tests to ensure [describe what was tested].<br>
-Used [testing tools or frameworks] to validate functionality.<br><br>
-Deployment:<br>
-Deployed the application using [deployment tool/service].<br>
-Configured deployment settings and connected with [any external services].<br><br>
-Problems Faced<br>
-
-Issue 1: [Brief description of a problem encountered]<br>
-Solution: [How you resolved it]<br>
-Issue 2: [Brief description of another problem]<br>
-Solution: [How you resolved it]<br>
+<br>This project is developed for the Google Developer Student Club (GDSC) recruitment process. <br>
+     <br>Tools Used: <br>
+<br>a.Programming Languages: HTML, JavaScript, CSS (TailwindCSS for styling) <br>
+b.Frameworks/Libraries: Font Awesome for icons, TailwindCSS for responsive design<br>
+c.Deployment:Vercel <br>
+d.Backend: Node.js (for handling form submissions) <br>
+<br>Methodologies and Approach: <br>
+<br>1. Initial Setup<br>
+<br>The project was initialized by creating the essential HTML structure using gdsctask.html. This file serves as the main page for the project. The following resources were added: <br>
+•	TailwindCSS for responsive and fast styling. <br>
+•	Font Awesome for icon usage. <br>
+•	JavaScript for functionality like toggling the navigation menu in mobile view. <br>
+<br>2. Responsive Layout with TailwindCSS<br><br>
+•	The layout of the page was built using TailwindCSS utility classes. <br>
+•	The topnav section provides a responsive navigation bar that adjusts based on the screen size, with media queries handling the mobile-friendly collapsible menu. <br>
+•	Styling such as background colors, text colors, margins, and padding were handled by utility classes like bg-gray-100, text-gray-800, font-semibold, etc. <br>
+•	The page content was structured using a grid layout (grid grid-cols-1 md:grid-cols-2) for better alignment of instructions on larger screens. <br>
+<br>3. Core Functionalities<br><br>
+•	Instructions Section: Implemented using an ordered list (ol) to guide candidates through the steps they need to take to complete the task, including enhancing the page’s design, adding an input box, setting up a submission system, and displaying the stored submissions. <br>
+•	Mobile Navigation: The JavaScript toggleNav() function toggles between showing and hiding the navigation links when viewed on mobile devices. This is handled by adding/removing a class to the navigation bar. <br>
+<br>4. Input and Submission System<br>
+<br>The task includes creating a system where users can input their submissions: <br>
+•	Input Box: Styled and added to the page, ensuring it was responsive across various screen sizes. <br>
+•	Submission Handling: A backend system (a server using Node.js) was set up to handle form submissions. The server would store the user input in a file system. <br>
+<br>5. Displaying Submissions<br><br>
+•	After the input is submitted and saved, a system to retrieve and display the stored data was implemented. <br>
+•	This could be done via a simple HTML list or a more advanced admin-like interface, depending on the scope of the task. The important aspect is the ease of use and visibility of the stored submissions. <br>
+<br>6. Deployment<br>
+<br>The project was deployed using a platform like Vercel. <br>
+<br>Problems Faced and Solutions: <br><br>
+•	Responsive Design Adjustments: Ensuring the page looks consistent across different devices was challenging. The solution was to utilize TailwindCSS's built-inresponsive classes and media queries. <br>
+•	Submission Storage: Handling submissions and storing them in the backend. <br>
+o	Solution: Used Node.js as the backend and connected it to a file system to store submissions. <br>
