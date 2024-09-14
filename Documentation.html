@@ -63,48 +63,88 @@
     </header>
     <main class="container mx-auto px-4 py-8">
         <h1 class="text-4xl font-bold text-gray-900 mb-6 text-center">Documentation of the project:</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <ol class="list-decimal pl-5 space-y-4">
-                            <ul class="list-disc pl-5 mt-2 space-y-2"></ul>
-
-
-<font size="12">
-<center><br>Project Title : GDSC Dev Team Recruitments Web Project<br></center>
-
-<br>Overview: <br>
-
-<br>This project is developed for the Google Developer Student Club (GDSC) recruitment process. <br>
-     <br>Tools Used: <br>
-<br>a.Programming Languages: HTML, JavaScript, CSS (TailwindCSS for styling) <br>
-b.Frameworks/Libraries: Font Awesome for icons, TailwindCSS for responsive design<br>
-c.Deployment:Vercel <br>
-d.Backend: Node.js (for handling form submissions) <br>
-<br>Methodologies and Approach: <br>
-<br>1. Initial Setup<br>
-<br>The project was initialized by creating the essential HTML structure using gdsctask.html. This file serves as the main page for the project. The following resources were added: <br>
-•	TailwindCSS for responsive and fast styling. <br>
-•	Font Awesome for icon usage. <br>
-•	JavaScript for functionality like toggling the navigation menu in mobile view. <br>
-<br>2. Responsive Layout with TailwindCSS<br><br>
-•	The layout of the page was built using TailwindCSS utility classes. <br>
-•	The topnav section provides a responsive navigation bar that adjusts based on the screen size, with media queries handling the mobile-friendly collapsible menu. <br>
-•	Styling such as background colors, text colors, margins, and padding were handled by utility classes like bg-gray-100, text-gray-800, font-semibold, etc. <br>
-•	The page content was structured using a grid layout (grid grid-cols-1 md:grid-cols-2) for better alignment of instructions on larger screens. <br>
-<br>3. Core Functionalities<br><br>
-•	Instructions Section: Implemented using an ordered list (ol) to guide candidates through the steps they need to take to complete the task, including enhancing the page’s design, adding an input box, setting up a submission system, and displaying the stored submissions. <br>
-•	Mobile Navigation: The JavaScript toggleNav() function toggles between showing and hiding the navigation links when viewed on mobile devices. This is handled by adding/removing a class to the navigation bar. <br>
-<br>4. Input and Submission System<br>
-<br>The task includes creating a system where users can input their submissions: <br>
-•	Input Box: Styled and added to the page, ensuring it was responsive across various screen sizes. <br>
-•	Submission Handling: A backend system (a server using Node.js) was set up to handle form submissions. The server would store the user input in a file system. <br>
-<br>5. Displaying Submissions<br><br>
-•	After the input is submitted and saved, a system to retrieve and display the stored data was implemented. <br>
-•	This could be done via a simple HTML list or a more advanced admin-like interface, depending on the scope of the task. The important aspect is the ease of use and visibility of the stored submissions. <br>
-<br>6. Deployment<br>
-<br>The project was deployed using a platform like Vercel. <br>
-<br>Problems Faced and Solutions: <br><br>
-•	Responsive Design Adjustments: Ensuring the page looks consistent across different devices was challenging. The solution was to utilize TailwindCSS's built-inresponsive classes and media queries. <br>
-•	Submission Storage: Handling submissions and storing them in the backend. <br>
-o	Solution: Used Node.js as the backend and connected it to a file system to store submissions. <br>
-</font>
+        <section class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Project Title: GDSC Dev Team Recruitments Web Project</h2>
+            <p class="text-lg mb-4">Overview: This project is developed for the Google Developer Student Club (GDSC) recruitment process.</p>
+            <ol class="list-decimal pl-5 space-y-4">
+                <li>
+                    <strong class="text-lg font-semibold">Tools Used:</strong>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li>Programming Languages: HTML, JavaScript, CSS (TailwindCSS for styling)</li>
+                        <li>Frameworks/Libraries: Font Awesome for icons, TailwindCSS for responsive design</li>
+                        <li>Deployment: Vercel</li>
+                        <li>Backend: Node.js (for handling form submissions)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong class="text-lg font-semibold">Methodologies and Approach:</strong>
+                    <ol class="list-decimal pl-5 mt-2 space-y-4">
+                        <li>
+                            Initial Setup
+                            <ul class="list-disc pl-5 mt-2 space-y-2">
+                                <li>The project was initialized by creating the essential HTML structure using gdsctask.html. This file serves as the main page for the project. The following resources were added:</li>
+                                <li>TailwindCSS for responsive and fast styling.</li>
+                                <li>Font Awesome for icon usage.</li>
+                                <li>JavaScript for functionality like toggling the navigation menu in mobile view.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Responsive Layout with TailwindCSS
+                            <ul class="list-disc pl-5 mt-2 space-y-2">
+                                <li>The layout of the page was built using TailwindCSS utility classes.</li>
+                                <li>The topnav section provides a responsive navigation bar that adjusts based on the screen size, with media queries handling the mobile-friendly collapsible menu.</li>
+                                <li>Styling such as background colors, text colors, margins, and padding were handled by utility classes like bg-gray-100, text-gray-800, font-semibold, etc.</li>
+                                <li>The page content was structured using a grid layout (grid grid-cols-1 md:grid-cols-2) for better alignment of instructions on larger screens.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Core Functionalities
+                            <ul class="list-disc pl-5 mt-2 space-y-2">
+                                <li>Instructions Section: Implemented using an ordered list (ol) to guide candidates through the steps they need to take to complete the task, including enhancing the page’s design, adding an input box, setting up a submission system, and displaying the stored submissions.</li>
+                                <li>Mobile Navigation: The JavaScript toggleNav() function toggles between showing and hiding the navigation links when viewed on mobile devices. This is handled by adding/removing a class to the navigation bar.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Input and Submission System
+                            <ul class="list-disc pl-5 mt-2 space-y-2">
+                                <li>The task includes creating a system where users can input their submissions:</li>
+                                <li>Input Box: Styled and added to the page, ensuring it was responsive across various screen sizes.</li>
+                                <li>Submission Handling: A backend system (a server using Node.js) was set up to handle form submissions. The server would store the user input in a file system.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Displaying Submissions
+                            <ul class="list-disc pl-5 mt-2 space-y-2">
+                                <li>After the input is submitted and saved, a system to retrieve and display the stored data was implemented.</li>
+                                <li>This could be done via a simple HTML list or a more advanced admin-like interface, depending on the scope of the task. The important aspect is the ease of use and visibility of the stored submissions.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Deployment
+                            <ul class="list-disc pl-5 mt-2 space-y-2">
+                                <li>The project was deployed using a platform like Vercel.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <strong class="text-lg font-semibold">Problems faced and Solutions:</strong>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li>Responsive Design Adjustments: Ensuring the page looks consistent across different devices was challenging. The solution was to utilize TailwindCSS's built-in responsive classes and media queries.</li>
+                        <li>Submission Storage: Handling submissions and storing them in the backend.</li>
+                        <li>Solution: Used Node.js as the backend and connected it to a file system to store submissions.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
+                            
+                                 
+                            
+                            
+                            
+                        
+                            
+                            
