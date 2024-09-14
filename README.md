@@ -1,5 +1,5 @@
 # gdsctask
-Project Overview
+Project Overview:
 This project contains a landing page for GDSC recruitments, styled using TailwindCSS. It also includes functionality for users to submit data via an input form, which is stored and displayed dynamically.
 Features
 •	Responsive web design using TailwindCSS.
