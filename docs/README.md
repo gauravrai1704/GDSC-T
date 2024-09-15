@@ -2,21 +2,21 @@
 Project Overview:
 This project contains a landing page for GDSC recruitments, styled using TailwindCSS. It also includes functionality for users to submit data via an input form, which is stored and displayed dynamically.
 Features
-•	Responsive web design using TailwindCSS.
-•	An input form that allows users to submit data.
-•	Backend system for storing and retrieving submissions.
-•	Deployed and live for easy access.
+1. Responsive web design using TailwindCSS.
+2. An input form that allows users to submit data.
+3. Backend system for storing and retrieving submissions.
+4. Deployed and live for easy access.
 Technologies Used
-•	Frontend: HTML, CSS (TailwindCSS), JavaScript
-•	Backend: Node.js (for handling form submissions)
-•	Icons: Font Awesome
+1. Frontend: HTML, CSS (TailwindCSS), JavaScript
+2. Backend: Node.js (for handling form submissions)
+3. Icons: Font Awesome
 •	Deployment: Netlify
 Folder Structure
-•	gdsctask.html: The main landing page that includes instructions.
-•	Documentation.html: A page detailing the project’s development.
-•	Submissions.html: A page containing an input box and a display area for submissions.The logic is that whatever the user inputs gets stored in submissions.json and is retrieved via server.js.
-•	styles.css: Custom CSS for styling (used alongside TailwindCSS).
-Approach
+4. gdsctask.html: The main landing page that includes instructions.
+5. Documentation.html: A page detailing the project’s development.
+6. Submissions.html: A page containing an input box and a display area for submissions.The logic is that whatever the user inputs gets stored in submissions.json and is retrieved via server.js.
+7. styles.css: Custom CSS for styling (used alongside TailwindCSS).
+Approach:
 1.	Initial Setup: Created the basic HTML structure with the required sections by inspecting the provided task page and used TailwindCSS for styling.
 2.	Form Creation: Implemented the form with responsive styles and ensured it worked across different screen sizes.
 3.	Submission Handling: Added a backend system to handle and store user submissions.
