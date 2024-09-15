@@ -10,7 +10,7 @@ Technologies Used
 1. Frontend: HTML, CSS (TailwindCSS), JavaScript
 2. Backend: Node.js (for handling form submissions)
 3. Icons: Font Awesome
-•	Deployment: Netlify
+•	Deployment: Netlify<br>
 Folder Structure
 4. gdsctask.html: The main landing page that includes instructions.
 5. Documentation.html: A page detailing the project’s development.
