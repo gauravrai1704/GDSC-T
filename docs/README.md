@@ -78,7 +78,7 @@ npm start<br>
 The website will be running locally at http://localhost:3000<br>
 Deployment<br>
 This project is deployed and accessible at:
-Live Project URL
+https://musical-cucurucho-f9d916.netlify.app
 The project was deployed using Netlify. <br>
 
 
