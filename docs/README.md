@@ -15,7 +15,7 @@ Folder Structure
 4. gdsctask.html: The main landing page that includes instructions.
 5. Documentation.html: A page detailing the project’s development.
 6. Submissions.html: A page containing an input box and a display area for submissions.The logic is that whatever the user inputs gets stored in submissions.json and is retrieved via server.js.
-7. styles.css: Custom CSS for styling (used alongside TailwindCSS).
+7. styles.css: Custom CSS for styling (used alongside TailwindCSS).<br>
 Approach:
 1.	Initial Setup: Created the basic HTML structure with the required sections by inspecting the provided task page and used TailwindCSS for styling.
 2.	Form Creation: Implemented the form with responsive styles and ensured it worked across different screen sizes.
